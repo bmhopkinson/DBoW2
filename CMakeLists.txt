@@ -27,22 +27,22 @@ set(INSTALL_LIBDIR "/usr/local/lib")
 set(INSTALL_INCLUDEDIR "/usr/local/include")
 
 set(HDRS
-  include/DBoW2/BowVector.h           include/DBoW2/FBrief.h
+  include/DBoW2/BowVector.h           include/DBoW2/FBrief.h     include/DBoW2/FSurf64.h
   include/DBoW2/QueryResults.h        include/DBoW2/TemplatedDatabase.h   include/DBoW2/FORB.h
   include/DBoW2/DBoW2.h               include/DBoW2/FClass.h              include/DBoW2/FeatureVector.h
   include/DBoW2/ScoringObject.h       include/DBoW2/TemplatedVocabulary.h	include/DBoW2/Random.h
   include/DBoW2/Timestamp.h
   )
 set(SRCS 
-  src/BowVector.cpp     src/FBrief.cpp        src/FORB.cpp	src/Timestamp.cpp
+  src/BowVector.cpp     src/FBrief.cpp        src/FORB.cpp	src/FSurf64.cpp    src/Timestamp.cpp
   src/FeatureVector.cpp src/QueryResults.cpp  src/ScoringObject.cpp	src/Random.cpp)
 
 set(DEPENDENCY_DIR ${CMAKE_CURRENT_BINARY_DIR}/dependencies)
 set(DEPENDENCY_INSTALL_DIR ${DEPENDENCY_DIR}/install)
 
 #find_package(OpenCV 3.1.0 REQUIRED PATHS /home/nvidia/Documents/opencv_build/share/OpenCV NO_DEFAULT_PATH)
-#find_package(OpenCV 3.1.0 REQUIRED PATHS /home/cv-bhlab/Documents/Libraries/opencv/opencv_3_4/install/share/OpenCV NO_DEFAULT_PATH)
-find_package(OpenCV 3.1.0 REQUIRED PATHS /home/brian/Documents/Libraries/opencv/3_4_13/install/share/OpenCV NO_DEFAULT_PATH)
+find_package(OpenCV 3.1.0 REQUIRED PATHS /home/cv-bhlab/Documents/Libraries/opencv/opencv_3_4_nonfree/install/share/OpenCV NO_DEFAULT_PATH)
+#find_package(OpenCV 3.1.0 REQUIRED PATHS /home/brian/Documents/Libraries/opencv/3_4_13/install/share/OpenCV NO_DEFAULT_PATH)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
